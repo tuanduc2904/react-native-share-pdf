@@ -7,7 +7,7 @@
 [![CircleCI](https://circleci.com/gh/MadeinFrance/react-native-share-pdf/tree/master.svg?style=shield)](https://circleci.com/gh/MadeinFrance/react-native-share-base64-pdf/)
 
 
-Android Library for saving and sharing a base64 encoded PDF.
+Android Library for saving and sharing a base64 encoded PDF. Fix merge manifest error and meta data count not found.
 
 ## Motivation
 ****
