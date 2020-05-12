@@ -60,7 +60,8 @@ React Native > 0.60 will autolink. For earlier versions:
     ```
     implementation project(':react-native-share-pdf')
     ```
-4. Add provider and meta-data tag in manifest file inside <application> tag: 
+4. Add xmlns:tools="http://schemas.android.com/tools" to <manifest>
+5. Add provider and meta-data tag in manifest file inside <application> tag: 
   <provider
       android:name="androidx.core.content.FileProvider"
       android:authorities="com.itg.dms.provider"
@@ -74,7 +75,7 @@ React Native > 0.60 will autolink. For earlier versions:
           tools:replace="android:resource"
           ></meta-data>
   </provider> 
-5. Create xml folder inside res and create provider_paths.xml and add content above:
+6. Create xml folder inside res and create provider_paths.xml and add content above:
 xml version="1.0" encoding="utf-8"?>
 paths xmlns:android="http://schemas.android.com/apk/res/android">
 external-path
