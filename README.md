@@ -31,7 +31,8 @@ npm i react-native-share-pdf
 import RNShareFile from 'react-native-share-pdf';
 
 async function loadAndSharePDF() {
-  const showError = await RNShareFile.sharePDF(mockData.document, mockData.filename);
+  //com.xxx = your app id
+  const showError = await RNShareFile.sharePDF(mockData.document, 'com.xxx.provider' mockData.filename);
   if (showError) {
     // Do something with the error
   }
@@ -41,7 +42,7 @@ async function loadAndSharePDF() {
 
 ## Methods
 
-* RNShareFile.share(base64Data, documentFileName);
+* RNShareFile.share(base64Data, provider, documentFileName);
 
 ### Manual Installation
 
@@ -59,7 +60,28 @@ React Native > 0.60 will autolink. For earlier versions:
     ```
     implementation project(':react-native-share-pdf')
     ```
-
+4. Add provider and meta-data tag in manifest file inside <application> tag: 
+  <provider
+      android:name="androidx.core.content.FileProvider"
+      android:authorities="com.itg.dms.provider"
+      android:exported="false"
+      android:grantUriPermissions="true"
+      tools:replace="android:authorities"
+      >
+      <meta-data
+          android:name="android.support.FILE_PROVIDER_PATHS"
+          android:resource="@xml/provider_paths"
+          tools:replace="android:resource"
+          ></meta-data>
+  </provider> 
+5. Create xml folder inside res and create provider_paths.xml and add content above:
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+<external-path
+    name="pdf_documents_for_sharing"
+    path="pdf_documents_for_sharing/" />
+    <files-path name="pdf_documents_for_sharing" path="pdf_documents_for_sharing/" />
+</paths>
 ## License
 
 [MIT](https://opensource.org/licenses/MIT)
