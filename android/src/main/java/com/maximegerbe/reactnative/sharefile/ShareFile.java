@@ -8,7 +8,7 @@ package com.maximegerbe.reactnative.sharefile;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v4.content.FileProvider;
+import androidx.core.content.FileProvider;
 import android.util.Base64;
 import android.app.Activity;
 
@@ -36,11 +36,11 @@ public class ShareFile extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public void share(String base64pdf, String filename, Promise promise) {
+  public void share(String base64pdf, String provider,String filename, Promise promise) {
     try {
       cleanSharedFiles();
       File pdfFile = writeFile(base64pdf, filename);
-      shareFile(pdfFile);
+      shareFile(pdfFile, provider);
 
       promise.resolve(true);
     } catch (IOException e) {
@@ -72,8 +72,8 @@ public class ShareFile extends ReactContextBaseJavaModule {
     return newFilePath;
   }
 
-  private void shareFile(File file) {
-    Uri outputFileUri = FileProvider.getUriForFile(reactContext, "com.maximegerbe.reactnative.sharefile.provider", file);
+  private void shareFile(File file, String provider) {
+    Uri outputFileUri = FileProvider.getUriForFile(reactContext, provider, file);
 
     Intent intentShareFile = new Intent(Intent.ACTION_SEND);
     intentShareFile.setType(TYPE_PDF);
