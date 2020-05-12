@@ -61,31 +61,33 @@ React Native > 0.60 will autolink. For earlier versions:
     implementation project(':react-native-share-pdf')
     ```
 4. Add xmlns:tools="http://schemas.android.com/tools" to "manifest" tag.
+
 5. Add provider and meta-data tag in manifest file inside "application" tag: 
-
-  <provider
-      android:name="androidx.core.content.FileProvider"
-      android:authorities="com.itg.dms.provider"
-      android:exported="false"
-      android:grantUriPermissions="true"
-      tools:replace="android:authorities"
-      >
-      <meta-data
-          android:name="android.support.FILE_PROVIDER_PATHS"
-          android:resource="@xml/provider_paths"
-          tools:replace="android:resource"
-          ></meta-data>
-  </provider> 
+    ```
+    <provider
+        android:name="androidx.core.content.FileProvider"
+        android:authorities="com.itg.dms.provider"
+        android:exported="false"
+        android:grantUriPermissions="true"
+        tools:replace="android:authorities"
+        >
+        <meta-data
+            android:name="android.support.FILE_PROVIDER_PATHS"
+            android:resource="@xml/provider_paths"
+            tools:replace="android:resource"
+            ></meta-data>
+    </provider> 
+  ```
 6. Create xml folder inside res and create provider_paths.xml and add content above:
-
+    ```
     <xml version="1.0" encoding="utf-8"?>
     <paths xmlns:android="http://schemas.android.com/apk/res/android">
     <external-path
-    name="pdf_documents_for_sharing"
-    path="pdf_documents_for_sharing/" />
+      name="pdf_documents_for_sharing"
+      path="pdf_documents_for_sharing/" />
     <files-path name="pdf_documents_for_sharing" path="pdf_documents_for_sharing/" />
-    <paths>
-
+    </paths>
+    ```
 ## License
 
 [MIT](https://opensource.org/licenses/MIT)
