@@ -84,6 +84,7 @@ React Native > 0.60 will autolink. For earlier versions:
     path="pdf_documents_for_sharing/" />
     files-path name="pdf_documents_for_sharing" path="pdf_documents_for_sharing/" />
     paths>
+
 ## License
 
 [MIT](https://opensource.org/licenses/MIT)
