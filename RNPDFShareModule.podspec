@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name             = 'RNPDFShareManager'
+  s.name             = 'RNPDFShareModule'
   s.version          = '1.0.0'
   s.summary          = 'A native module for sharing PDF files from base64 in React Native.'
   s.description      = 'A native module for sharing PDF files from base64 in React Native.'
@@ -15,8 +15,6 @@ Pod::Spec.new do |s|
 
   # Replace 'YourProjectName' with your actual project name in React Native
   s.dependency 'React'
-  s.requires_arc = true
-
   # Add other dependencies if your native module uses them
 
 end
