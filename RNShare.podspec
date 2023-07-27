@@ -1,18 +1,12 @@
-require "json"
-
-package = JSON.parse(File.read(File.join(__dir__, "package.json")))
-
 Pod::Spec.new do |s|
-  s.name         = "RNShare"
-  s.version      = package["version"]
-  s.summary      = "Social Share, Sending Simple Data to Other Apps"
-  s.homepage     = "https://github.com/react-native-community/react-native-share"
-  s.license      = "MIT"
-  s.author             = { "Esteban Fuentealba" => "efuentealba@json.cl" }
-  s.platform     = :ios, "8.0"
-  s.source       = { :git => "https://github.com/react-native-community/react-native-share.git", :tag => "#{s.version}" }
-
-  s.source_files  = "ios/**/*.{h,m}"
-
+  s.name         = 'SharePDF'
+  s.version      = '1.0.0'
+  s.summary      = 'A React Native module for sharing PDF files from base64.'
+  s.homepage     = 'https://github.com/tuanduc2904/react-native-share-pdf'
+  s.license      = { :type => 'MIT', :file => 'LICENSE' }
+  s.author       = { 'Duc Nguyen' => 'tuanduc2904@gmail.com.com' }
+  s.source       = { :git => 'https://github.com/tuanduc2904/react-native-share-pdf.git', :tag => s.version.to_s } # Thay đổi URL repository của bạn
+  s.platform     = :ios, '9.0'
+  s.source_files = 'ios/**/*.{h,m}'
   s.dependency "React"
 end
