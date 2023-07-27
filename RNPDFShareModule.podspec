@@ -15,16 +15,7 @@ Pod::Spec.new do |s|
   s.header_dir = 'ios'
 
   # Replace 'YourProjectName' with your actual project name in React Native
-  s.dependency 'React', :path => '../node_modules/react-native', :subspecs => [
-    'Core',
-    'CxxBridge',
-    'DevSupport',
-    'RCTText',
-    'RCTNetwork',
-    'RCTWebSocket',
-    'RCTAnimation',
-    # Add other subspecs that your project uses
-  ]
+  s.dependency 'React'
 
   # Add other dependencies if your native module uses them
 
