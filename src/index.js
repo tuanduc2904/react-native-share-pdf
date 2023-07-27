@@ -13,6 +13,8 @@ export default {
     try {
       Platform.select({
         ios: async () => {
+          console.log('FileSharingModule',FileSharingModule);
+          console.log('NativeModules',NativeModules);
           FileSharingModule.sharePDF(base64Data, documentFileName);
         },
         android: async () => {
@@ -20,6 +22,7 @@ export default {
         },
       })();
     } catch (err) {
+      console.log(err);
       return err;
     }
   },

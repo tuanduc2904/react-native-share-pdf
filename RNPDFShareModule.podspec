@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.description      = 'A native module for sharing PDF files from base64 in React Native.'
   s.homepage         = 'https://github.com/tuanduc2904/react-native-share-pdf'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Your Name' => 'your-email@example.com' }
+  s.author           = { 'Duc Nguyen' => 'tuanduc2904@gmail.com' }
   s.source           = { :git => 'https://github.com/tuanduc2904/react-native-share-pdf.git', :tag => s.version.to_s }
   s.swift_version = '5.0'
   s.platform     = :ios, '9.0'
@@ -16,6 +16,7 @@ Pod::Spec.new do |s|
 
   # Replace 'YourProjectName' with your actual project name in React Native
   s.dependency 'React'
+  s.requires_arc = true
 
   # Add other dependencies if your native module uses them
 
