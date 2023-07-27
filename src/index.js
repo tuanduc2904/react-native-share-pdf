@@ -3,6 +3,7 @@ import {
   Platform,
   NativeModules,
   Share,
+  Alert,
 } from 'react-native';
 
 const { RNShareFile } = NativeModules;
@@ -10,15 +11,7 @@ const { RNShareFile } = NativeModules;
 export default {
   sharePDF: async (base64Data: string, provider: string, documentFileName: string): Promise<Error | void> => {
     try {
-      await Platform.select({
-        ios: async () => {
-          await Share.share({ url: `data:application/pdf;base64,${base64Data}` });
-        },
-        android: async () => {
-          await RNShareFile.share(base64Data, provider, documentFileName);
-        },
-      })();
-      return undefined;
+      RNShareFile.share(base64Data, provider, documentFileName);
     } catch (err) {
       return err;
     }
