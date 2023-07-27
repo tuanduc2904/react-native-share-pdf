@@ -6,17 +6,17 @@ import {
   Alert,
 } from 'react-native';
 
-const { RNShareFile } = NativeModules;
+const { RNShareFile, FileSharingModule } = NativeModules;
 
 export default {
   sharePDF: async (base64Data: string, provider: string, documentFileName: string): Promise<Error | void> => {
     try {
       Platform.select({
         ios: async () => {
-           Share.share(base64Data);
+          FileSharingModule.sharePDF(base64Data, documentFileName);
         },
         android: async () => {
-           RNShareFile.share(base64Data, documentFileName);
+          RNShareFile.share(base64Data, provider, documentFileName);
         },
       })();
     } catch (err) {

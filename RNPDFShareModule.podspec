@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '9.0'
   s.requires_arc = true
 
-  s.source_files = 'ios/*.{h,m}'
+  s.source_files = 'ios/*.{h,m,swift}'
   s.header_dir = 'ios'
 
   # Replace 'YourProjectName' with your actual project name in React Native
