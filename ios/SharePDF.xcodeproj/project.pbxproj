@@ -17,7 +17,7 @@
 		6C3F4EB02A7229A0003952C3 /* SharePDFTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3F4EAF2A7229A0003952C3 /* SharePDFTests.m */; };
 		6C3F4EBA2A7229A0003952C3 /* SharePDFUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3F4EB92A7229A0003952C3 /* SharePDFUITests.m */; };
 		6C3F4EBC2A7229A0003952C3 /* SharePDFUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3F4EBB2A7229A0003952C3 /* SharePDFUITestsLaunchTests.m */; };
-		6C3F4ECB2A722BDC003952C3 /* RNShareFile in Sources */ = {isa = PBXBuildFile; fileRef = 6C3F4ECA2A722BDC003952C3 /* RNShareFile */; };
+		6C3F4EE62A724A4A003952C3 /* RNShareFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3F4EE52A724A4A003952C3 /* RNShareFile.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +55,9 @@
 		6C3F4EB52A7229A0003952C3 /* SharePDFUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharePDFUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C3F4EB92A7229A0003952C3 /* SharePDFUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SharePDFUITests.m; sourceTree = "<group>"; };
 		6C3F4EBB2A7229A0003952C3 /* SharePDFUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SharePDFUITestsLaunchTests.m; sourceTree = "<group>"; };
-		6C3F4ECA2A722BDC003952C3 /* RNShareFile */ = {isa = PBXFileReference; lastKnownFileType = text; path = RNShareFile; sourceTree = "<group>"; };
 		6C3F4ECC2A722C39003952C3 /* SharePDFModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharePDFModule.h; sourceTree = "<group>"; };
+		6C3F4EE42A724933003952C3 /* RNShareFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNShareFile.h; sourceTree = "<group>"; };
+		6C3F4EE52A724A4A003952C3 /* RNShareFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNShareFile.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,14 +113,15 @@
 				6C3F4E962A72299F003952C3 /* SceneDelegate.h */,
 				6C3F4E972A72299F003952C3 /* SceneDelegate.m */,
 				6C3F4ECC2A722C39003952C3 /* SharePDFModule.h */,
-				6C3F4ECA2A722BDC003952C3 /* RNShareFile */,
 				6C3F4E992A72299F003952C3 /* ViewController.h */,
 				6C3F4E9A2A72299F003952C3 /* ViewController.m */,
 				6C3F4E9C2A72299F003952C3 /* Main.storyboard */,
 				6C3F4E9F2A7229A0003952C3 /* Assets.xcassets */,
 				6C3F4EA12A7229A0003952C3 /* LaunchScreen.storyboard */,
 				6C3F4EA42A7229A0003952C3 /* Info.plist */,
+				6C3F4EE52A724A4A003952C3 /* RNShareFile.m */,
 				6C3F4EA52A7229A0003952C3 /* main.m */,
+				6C3F4EE42A724933003952C3 /* RNShareFile.h */,
 			);
 			path = SharePDF;
 			sourceTree = "<group>";
@@ -271,7 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C3F4ECB2A722BDC003952C3 /* RNShareFile in Sources */,
+				6C3F4EE62A724A4A003952C3 /* RNShareFile.m in Sources */,
 				6C3F4E9B2A72299F003952C3 /* ViewController.m in Sources */,
 				6C3F4E952A72299F003952C3 /* AppDelegate.m in Sources */,
 				6C3F4EA62A7229A0003952C3 /* main.m in Sources */,
