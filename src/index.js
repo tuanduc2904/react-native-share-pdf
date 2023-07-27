@@ -11,8 +11,14 @@ const { RNShareFile } = NativeModules;
 export default {
   sharePDF: async (base64Data: string, provider: string, documentFileName: string): Promise<Error | void> => {
     try {
-      
-      RNShareFile.share(base64Data, provider, documentFileName);
+      Platform.select({
+        ios: async () => {
+           Share.share(base64Data);
+        },
+        android: async () => {
+           RNShareFile.share(base64Data, documentFileName);
+        },
+      })();
     } catch (err) {
       return err;
     }
